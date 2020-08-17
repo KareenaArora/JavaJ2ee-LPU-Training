@@ -1,1 +1,17 @@
+// Assignment: Print Your Name in Your Regional Language with unicode table as reference :)
+
+package Assignment1;
+
+public class Assignment1 
+{
+		public static void main(String[] args)
+		{
+			String fn = "\u0A15\u0A30\u0A40\u0A28\u0A3E";
+			String ln = "\u0A05\u0A30\u0A4C\u0A5C\u0A3E";
+			System.out.println("Name: "+fn+" "+ln);
+
+
+		}
+
+}
 

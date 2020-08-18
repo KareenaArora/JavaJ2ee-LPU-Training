@@ -16,7 +16,7 @@ public class Assignment1
 }
 
 
-
+########################################################################################################################################################
 
 
 // Assignment: Explore shift operators on negative numbers
@@ -61,6 +61,8 @@ public class Assignment2 {
 }
 
 
+####################################################################################################################################################
+
 
 // Assignment: Implement Recursive Function to Code binary representation of a number
 
@@ -89,3 +91,57 @@ public static void main(String args[])
 } 
   
 } 
+
+
+###################################################################################################################################################
+
+
+// Assignment: Explore Overriding in case of static methods !!
+
+
+class A 
+{
+	public static int sum(int a, int b) 
+	{
+		return a+b;
+	}
+	public int s(int a, int b) 
+	{
+		return a+b;
+	}
+}
+class B extends A 
+{
+	public static int sum(int a, int b) 
+	{
+		return a-b;
+	}
+	public int s(int a, int b) 
+	{
+		return a-b;
+	}
+}
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+
+		System.out.println("Calling the static methods without object creation");
+		System.out.println(A.sum(5,2));
+		System.out.println(B.sum(5,2));
+		B test1 = new B();
+		A test2 = new B(); 
+		A test3 = new A();
+
+		System.out.println("Calling the non-static methods with object creation and method overriding");
+		System.out.println(test1.s(5,2));
+		System.out.println(test2.s(5,2)); 
+		System.out.println(test3.s(5,2));
+
+		System.out.println("Calling the static methods with object creation and method overriding");
+		System.out.println(test1.sum(5,2));
+		System.out.println(test2.sum(5,2)); 
+		System.out.println(test3.sum(5,2));
+	}
+}
